@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Formulario de Alta</title>
+    <!-- BOOTSTRAP 4 -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+  </head>
+  <body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">INDUROT</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <form class="form-inline my-2 my-lg-0">
+            <input name="search" id="search" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+            <button class="btn btn-success my-2 my-sm-0" type="submit">Buscar</button>
+          </form>
+          <li><button id = "limpiar" class = "btn btn-success my-4 my-sm-0" type="submit">Limpiar</button></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row p-4">
+        <!-- Columna del formulario más ancho -->
+        <div class="col-md-7">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title text-center">Formulario de Alta</h4>
+              <hr>
+              <!-- FORMULARIO -->
+              <form id="altaForm" method="post">
+                <!-- Nombre -->
+                <div class="form-group">
+                  <label for="nombre">Nombre:</label>
+                  <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Inserte Nombre y apellidos" >
+                </div>
+
+                <!-- Correo electrónico -->
+                <div class="form-group">
+                  <label for="email">Correo electrónico:</label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="ejemplo@email.com" >
+                </div>
+
+                <!-- Experiencia en INDUROT -->
+             <!-- Experiencia en INDUROT -->
+              <div class="form-group">
+                <label>¿Has trabajado anteriormente en INDUROT?</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="experiencia_si" name="experiencia" value="Si">
+                    <label class="form-check-label" for="experiencia_si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="experiencia_no" name="experiencia" value="No">
+                    <label class="form-check-label" for="experiencia_no">No</label>
+                </div>
+              </div>
+               <!-- Acceso a carpetas -->
+              <div class="form-group">
+                <label>¿Precisa acceder a carpetas de proyectos?</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" id="proyecto_si" type="radio" name="proyecto" value="Si">
+                    <label class="form-check-label" for="proyecto_si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" id="proyecto_no" type="radio" name="proyecto" value="No">
+                    <label class="form-check-label" for="proyecto_no">No</label>
+                </div>
+              </div>
+
+              <!-- Objetivo o Tarea -->
+              <div class="form-group">
+                <label>Objetivo o Tarea:</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="status" id="status_contratado" value="Contratado" required>
+                    <label class="form-check-label" for="status_contratado">Contratado</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="status" id="status_practicas" value="Prácticas" required>
+                    <label class="form-check-label" for="status_practicas">Prácticas</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="status" id="status_tesis" value="Tesis" required>
+                    <label class="form-check-label" for="status_tesis">Tesis</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="status" id="status_colaborador" value="Colaborador" required>
+                    <label class="form-check-label" for="status_colaborador">Colaborador/a</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="status" id="status_otro" value="Otro" required>
+                    <label class="form-check-label" for="status_otro">Otro</label>
+                </div>
+              </div>
+
+
+                <!-- Fecha de entrada -->
+                <div class="form-group">
+                  <label for="fechaIN">Fecha de entrada:</label>
+                  <input type="date" class="form-control" id="fechaIN" name="fechaIN"  required>
+                </div>
+
+                <!-- Fecha de salida -->
+                <div class="form-group">
+                  <label for="fechaOUT">Fecha de salida (aprox):</label>
+                  <input type="date" class="form-control" id="fechaOUT" name="fechaOUT"  required>
+                </div>
+
+                <!-- Ubicación -->
+                <div class="form-group">
+                  <label for="ubicacion">Ubicación:</label>
+                  <input type="text" class="form-control" id="ubicacion" name="ubicacion"  placeholder="(Sala, Despacho, Otro: .. )" required>
+                </div>
+
+                <!-- Coordinador -->
+                <div class="form-group">
+                  <label for="coordinador">Coordinador:</label>
+                  <input type="text" class="form-control" id="coordinador" name="coordinador"  placeholder="Indique el nombre del coordinador/a" required>
+                </div>
+
+                <!-- Permisos -->
+                <div class="form-group">
+                  <label for="permisos">Permisos:</label>
+                  <input type="text" class="form-control" id="permisos" name="permisos"  placeholder="Permisos" required>
+                </div>
+
+                <!-- Renovación -->
+                <div class="form-group">
+                  <label>Renovación:</label>
+                  <input type="checkbox" id="renovacion" name="renovacion" value="si" >
+                </div>
+
+                <!-- Precisa trabajar con -->
+                <div class="form-group">
+                  <label>Precisa trabajar con:</label>
+                  <input type="text" class="form-control" id = "conocimientos" name="conocimientos"  placeholder="( GIS, Ofimática, Otros: )">
+                </div>
+
+                <!-- Observaciones -->
+                <div class="form-group">
+                  <label for="observaciones">Observaciones:</label>
+                  <textarea class="form-control" name="observaciones" id="observaciones" rows="4"></textarea>
+                </div>
+                <input type="hidden" id="userID" name="id" value="">
+
+                <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Columna del listado -->
+        <div class="col-md-5">
+          <div class="card my-4" id="task-result">
+            <div class="card-body">
+              <!-- SEARCH RESULT -->
+              <ul id="container"></ul>
+            </div>
+          </div>
+
+          <!-- LISTADO DE USUARIOS -->
+          <table class="table table-bordered table-sm">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Mail</th>
+                <th>Fecha In</th>
+                <th>Fecha Out</th>
+                <th>Coordinador</th>
+              </tr>
+            </thead>
+            
+            <tbody id="users"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src = "app.js"></script>
+  </body>
+</html>
